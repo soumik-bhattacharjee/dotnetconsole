@@ -4,7 +4,7 @@ services:
 script: 
     docker build -t dotnetconsole -f Dockerfile .
 before_deploy:
-    - docker tag  program  "$DOCKER_USERNAME"/dotnetconsole:latest
+    - docker tag  dotnetconsole "$DOCKER_USERNAME"/dotnetconsole:latest
     - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin  
 deploy:
   provider: script
