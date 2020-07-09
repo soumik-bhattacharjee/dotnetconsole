@@ -12,3 +12,4 @@ deploy:
      docker push "$DOCKER_USERNAME"/dotnetconsole:latest
   on:
     branch: master  
+    
